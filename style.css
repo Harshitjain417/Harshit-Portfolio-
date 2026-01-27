@@ -32,11 +32,11 @@ body{
   width:160px;
   height:160px;
   border-radius:50%;
-  background-image:url("assets/profile.jpg");
+  background:#ddd;
+  background-image: url("assets/profile.jpg");
   background-size:cover;
   background-position:center;
   margin-bottom:18px;
-
 }
 
 .name{
