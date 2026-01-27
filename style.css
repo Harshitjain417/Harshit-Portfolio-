@@ -28,12 +28,9 @@ body{
   height:fit-content;
 }
 
-.profile .avatar::after{
-  /* DELETE EVERYTHING INSIDE AND THIS BLOCK */
 }
 
 .profile .avatar{
-  position: relative;
   width:160px;
   height:160px;
   border-radius:50%;
@@ -42,15 +39,14 @@ body{
   background-position:center;
   margin-bottom:18px;
 
-  /* REAL glow */
+  /* REAL SOFT GLOW */
   box-shadow:
-    0 0 18px rgba(255,255,255,0.35),
-    0 0 45px rgba(255,255,255,0.25),
-    0 0 80px rgba(255,255,255,0.15);
+    0 0 12px rgba(255,255,255,0.25),
+    0 0 30px rgba(255,255,255,0.20),
+    0 0 60px rgba(255,255,255,0.15);
+}
   );
 
-  filter: blur(22px);
-  z-index:-1;
   pointer-events:none;
 }
 
