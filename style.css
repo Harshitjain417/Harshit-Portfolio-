@@ -97,6 +97,11 @@ body{
 .card.tall{ height:320px; }
 .card.square{ height:180px; }
 .card.wide{ height:160px; }
+.card.tall.video-card{
+  aspect-ratio: 9 / 16;
+  height: auto;
+  background:#000;
+}
 
 /* VIDEO CARD */
 .video-card video{
