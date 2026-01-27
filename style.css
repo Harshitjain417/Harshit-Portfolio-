@@ -6,8 +6,8 @@
 }
 
 body{
-  background:#ffffff;
-  color:#111;
+  background:#000000;
+  color:#fff;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -28,18 +28,19 @@ body{
   height:fit-content;
 }
 
-.profile-pic {
+/* AVATAR WITH GLOW EFFECT */
+.avatar {
   width: 220px;
   height: 220px;
   border-radius: 50%;
   margin-bottom: 24px;
+  background: url('your-image.jpg') center/cover;
   box-shadow: 
-    0 0 40px rgba(255, 255, 255, 0.4),
-    0 0 80px rgba(255, 255, 255, 0.3),
-    0 0 120px rgba(255, 255, 255, 0.15),
-    0 8px 32px rgba(0, 0, 0, 0.1);
+    0 0 60px rgba(255, 255, 255, 0.3),
+    0 0 100px rgba(255, 255, 255, 0.2),
+    0 0 140px rgba(255, 255, 255, 0.1),
+    0 8px 40px rgba(255, 255, 255, 0.15);
   border: 3px solid rgba(255, 255, 255, 0.2);
-  object-fit: cover;
 }
 
 .name{
@@ -50,13 +51,13 @@ body{
 
 .role{
   font-size:16px;
-  color:#444;
+  color:#ccc;
   margin-bottom:8px;
 }
 
 .desc{
   font-size:16px;
-  color:#555;
+  color:#aaa;
   line-height:1.5;
   margin-top:6px;
 }
@@ -75,6 +76,7 @@ body{
   font-size:18px;
   font-weight:700;
   margin-bottom:20px;
+  color:#fff;
 }
 
 /* CARDS */
@@ -125,64 +127,4 @@ body{
 .logo2{ background:#111; }
 .yt1{ background:linear-gradient(90deg,#12c2e9,#c471ed,#f64f59); }
 .yt2{ background:linear-gradient(90deg,#000,#333); }
-.titleanim{ background:linear-gradient(90deg,#dcdcdc,#f9f9f9); }
-.clinic1{ background:#f1f1f1; }
-.clinic2{ background:linear-gradient(180deg,#444,#111); }
-.clinic3{ background:#e8dcd4; }
-
-.whitecard{
-  background:#fff;
-  justify-content:flex-start;
-  align-items:flex-start;
-  text-align:left;
-}
-
-/* CONTACT */
-.contactcard{
-  text-decoration:none;
-  color:#111;
-  background:#f7f7f7;
-  border-radius:20px;
-  padding:18px;
-  display:flex;
-  gap:14px;
-  align-items:center;
-  box-shadow: 0 12px 25px rgba(0,0,0,.06);
-  border:1px solid rgba(0,0,0,.04);
-}
-
-.icon{
-  width:44px;
-  height:44px;
-  border-radius:14px;
-  display:grid;
-  place-items:center;
-  font-weight:800;
-  background:#0a66c2;
-  color:#fff;
-}
-
-.icon.green{ background:#25D366; }
-.icon.ig{ background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); }
-
-.cname{ font-weight:800; }
-.csub{ font-size:13px; opacity:.7; }
-
-.mapcard{ padding:0; overflow:hidden; }
-.mapmini{
-  height:100%;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(180deg,#cfe9ff,#e6ffd7);
-  font-weight:700;
-}
-
-/* RESPONSIVE */
-@media (max-width: 980px){
-  .wrap{
-    grid-template-columns:1fr;
-    padding:24px;
-  }
-  .left{ position:relative; top:0; }
-  .right{ max-width:100%; }
-}
+.title​​​​​​​​​​​​​​​​
