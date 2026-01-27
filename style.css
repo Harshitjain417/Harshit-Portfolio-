@@ -43,7 +43,7 @@ body{
 .profile .avatar::after{
   content:"";
   position:absolute;
-  inset:-14px;
+  inset:-18px;
   border-radius:50%;
   background: radial-gradient(
   circle,
@@ -52,7 +52,7 @@ body{
   rgba(255,255,255,0.25) 60%,
   rgba(255,255,255,0) 70%
 );
-filter: blur(18px);
+filter: blur(26px);
 opacity:1;
 z-index: -1;
 pointer-events: none;
