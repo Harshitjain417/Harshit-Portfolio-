@@ -13,19 +13,22 @@ body{
 }
 
 .wrap{
-  max-width: 980px;
+  max-width: 1180px;
   margin: 0 auto;
   width: 100%;
-  padding: 24px 16px;
+  padding: 28px 18px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 42px;
+  align-items: start;
 }
 
 /* LEFT */
 .left{
-  position: static;
+  position: sticky;
+  top: 24px;
+  height: fit-content;
 }
 
 .profile .avatar{
@@ -60,7 +63,7 @@ body{
 
 /* RIGHT */
 .right{
-  max-width:900px;
+  max-width: 100%;
 }
 
 .section{
