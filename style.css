@@ -6,7 +6,7 @@
 }
 
 body{
-  background:#000;
+  background: #000 url("assets/bg.jpg") center/cover no-repeat fixed;
   color:#fff;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
