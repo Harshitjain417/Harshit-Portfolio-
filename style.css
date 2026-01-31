@@ -40,6 +40,17 @@ body{
   background-size:cover;
   background-position:center;
   margin-bottom:18px;
+  
+  /* GLOW EFFECT - New Addition */
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.2),
+    0 0 60px rgba(255, 255, 255, 0.1),
+    0 0 80px rgba(100, 150, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  
+  /* Optional: Add animation for pulsing glow */
+  animation: pulse-glow 3s ease-in-out infinite;
 }
 
 .name{
