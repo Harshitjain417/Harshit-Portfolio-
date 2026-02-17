@@ -241,3 +241,50 @@ body{
     position: static;
   }
 }
+
+/* MOBILE FIX */
+@media (max-width: 768px){
+
+  .wrap{
+    grid-template-columns: 1fr;
+    padding: 20px 14px;
+  }
+
+  .right{
+    width: 100%;
+  }
+
+  .cards,
+  .cards.two,
+  .cards.three,
+  .cards.four,
+  .cards.one,
+  .cards.contactgrid{
+    grid-template-columns: 1fr !important;
+    justify-content: stretch;
+  }
+
+  .card{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card.tall,
+  .card.square,
+  .card.wide{
+    height: auto;
+  }
+
+  .card.tall.video-card{
+    aspect-ratio: 9 / 16;
+  }
+
+  .section{
+    margin-bottom: 40px;
+  }
+
+  .title{
+    text-align: left;
+    padding-left: 6px;
+  }
+}
