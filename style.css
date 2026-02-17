@@ -242,3 +242,21 @@ body{
   }
 }
 
+/* HARD OVERLAP FIX */
+.cards{
+  align-items: start;
+}
+
+.card{
+  height: auto !important;
+}
+
+.card video{
+  display: block;
+}
+
+/* force proper flow */
+.section{
+  display: block;
+  clear: both;
+}
