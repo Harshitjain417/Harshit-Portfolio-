@@ -6,10 +6,8 @@
 }
 
 body{
-  background:#000;
-  color:#fff;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  background:#ffffff;
+  color:#111;
 }
 
 .wrap{
@@ -97,21 +95,6 @@ body{
 .card.tall{ height:320px; }
 .card.square{ height:180px; }
 .card.wide{ height:160px; }
-
-.card.tall.video-card{
-  aspect-ratio: 9 / 16;
-  height: auto;
-  background:#000;
-}
-
-/* VIDEO CARD */
-.video-card video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:22px;
-  display:block;
-}
 
 .thumb{
   width:100%;
