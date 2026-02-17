@@ -33,40 +33,28 @@
         <h2 class="title">Premium & Clean Motion Graphics</h2>
 
         <div class="cards two">
-          <div class="card tall video-card">
-            <video 
-              src="assets/motion-1.MP4"
-              autoplay
-              muted
-              loop
-              playsinline>
-            </video>
+          <div class="card tall">
+            <div class="thumb gray">
+              <p class="small">they are not selling an</p>
+              <p class="big">Energy Drink</p>
+            </div>
           </div>
 
-          <div class="card tall video-card">
-  <video
-    src="assets/motion-2.mp4"
-    autoplay
-    muted
-    loop
-    playsinline>
-  </video>
-</div>
-</div>
-        
+          <div class="card tall">
+            <div class="thumb gray">
+              <p class="big">Starter Homes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- SECTION 2 -->
       <div class="section">
-        <h2 class="title">SaaS Motion Graphics</h2>
+        <h2 class="title">Documentary Style & Map Animations</h2>
 
         <div class="cards two">
-          <div class="card tall video-card">
-            <video 
-              src="assets/motion-3.MP4"
-              autoplay
-              muted
-              loop
-              playsinline>
-            </video>
+          <div class="card tall">
+            <div class="thumb poster"></div>
           </div>
 
           <div class="card tall">
@@ -176,15 +164,6 @@
 
     </section>
   </main>
-<script>
-  document.querySelectorAll('.card, .contactcard').forEach(el => {
-    el.addEventListener('mousemove', (e) => {
-      const r = el.getBoundingClientRect();
-      el.style.setProperty('--x', (e.clientX - r.left) + 'px');
-      el.style.setProperty('--y', (e.clientY - r.top) + 'px');
-    });
-  });
-</script>
 
 </body>
 </html>

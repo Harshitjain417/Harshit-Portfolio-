@@ -6,29 +6,24 @@
 }
 
 body{
-  background: #000 url("assets/bg.jpg") center/cover no-repeat fixed;
-  color:#fff;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  background:#ffffff;
+  color:#111;
 }
 
 .wrap{
-  max-width: 1180px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 28px 18px;
-
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 42px;
-  align-items: start;
+  width:100%;
+  min-height:100vh;
+  display:grid;
+  grid-template-columns: 420px 1fr;
+  gap:40px;
+  padding:40px 60px;
 }
 
 /* LEFT */
 .left{
-  position: sticky;
-  top: 24px;
-  height: fit-content;
+  position:sticky;
+  top:40px;
+  height:fit-content;
 }
 
 .profile .avatar{
@@ -40,17 +35,6 @@ body{
   background-size:cover;
   background-position:center;
   margin-bottom:18px;
-  
-  /* GLOW EFFECT - New Addition */
-  box-shadow: 
-    0 0 20px rgba(255, 255, 255, 0.3),
-    0 0 40px rgba(255, 255, 255, 0.2),
-    0 0 60px rgba(255, 255, 255, 0.1),
-    0 0 80px rgba(100, 150, 255, 0.15);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  
-  /* Optional: Add animation for pulsing glow */
-  animation: pulse-glow 3s ease-in-out infinite;
 }
 
 .name{
@@ -61,7 +45,7 @@ body{
 
 .role{
   font-size:16px;
-  color:#ccc;
+  color:#444;
   margin-bottom:8px;
 }
 
@@ -74,7 +58,7 @@ body{
 
 /* RIGHT */
 .right{
-  max-width: 100%;
+  max-width:900px;
 }
 
 .section{
@@ -108,52 +92,9 @@ body{
   border:1px solid rgba(0,0,0,.04);
 }
 
-.card{
-  position: relative;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.card::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  border-radius: inherit;
-  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%),
-    rgba(255,255,255,.25),
-    rgba(255,255,255,0) 55%);
-  opacity: 0;
-  pointer-events:none;
-  transition: opacity .25s ease;
-}
-
-.card:hover{
-  transform: translateY(-6px);
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.55),
-    0 0 0 1px rgba(255,255,255,.06) inset;
-}
-
-.card:hover::before{
-  opacity: 1;
-}
-
 .card.tall{ height:320px; }
 .card.square{ height:180px; }
 .card.wide{ height:160px; }
-.card.tall.video-card{
-  aspect-ratio: 9 / 16;
-  height: auto;
-  background:#000;
-}
-
-/* VIDEO CARD */
-.video-card video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:22px;
-  display:block;
-}
 
 .thumb{
   width:100%;
@@ -234,29 +175,9 @@ body{
 /* RESPONSIVE */
 @media (max-width: 980px){
   .wrap{
-    grid-template-columns: 1fr;
-    gap: 28px;
+    grid-template-columns:1fr;
+    padding:24px;
   }
-  .left{
-    position: static;
-  }
-}
-
-/* HARD OVERLAP FIX */
-.cards{
-  align-items: start;
-}
-
-.card{
-  height: auto !important;
-}
-
-.card video{
-  display: block;
-}
-
-/* force proper flow */
-.section{
-  display: block;
-  clear: both;
+  .left{ position:relative; top:0; }
+  .right{ max-width:100%; }
 }
