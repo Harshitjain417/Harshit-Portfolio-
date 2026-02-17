@@ -95,7 +95,7 @@ body{
   justify-content:center;
 }
 
-.cards.two{ grid-template-columns: repeat(2, 210px); }
+.cards.three{ grid-template-columns: repeat(3, 210px); }
 .cards.one{ grid-template-columns: 520px; }
 .cards.four{ grid-template-columns: repeat(4, 170px); }
 .cards.contactgrid{ grid-template-columns: repeat(2, 320px); }
