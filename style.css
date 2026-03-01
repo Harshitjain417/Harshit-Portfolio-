@@ -39,6 +39,7 @@ body {
   position: sticky;
   top: 40px;
   height: fit-content;
+  align-self: start;
 }
 
 /* Profile picture — put your photo at assets/profile.jpg */
