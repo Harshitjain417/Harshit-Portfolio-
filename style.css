@@ -52,6 +52,7 @@ body {
   background-size: cover;
   background-position: center;
   margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .name {
