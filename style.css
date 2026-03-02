@@ -44,7 +44,7 @@ body {
 
 /* Profile picture — put your photo at assets/profile.jpg */
 .profile .avatar {
-  width: 100px;
+  width: 320px;
   height: 220px;
   border-radius: 5%;
   background: #ddd;
