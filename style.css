@@ -210,15 +210,17 @@ body {
 ============================================================ */
 .contactcard {
   text-decoration: none;
-  color: #111;
-  background: #f7f7f7;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   padding: 18px 20px;
   display: flex;
   gap: 14px;
   align-items: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -244,8 +246,8 @@ body {
 .icon.whatsapp  { background: #25D366; }
 .icon.instagram { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); }
 
-.cname { font-weight: 700; font-size: 15px; }
-.csub  { font-size: 12px; opacity: 0.65; margin-top: 2px; }
+.cname { font-weight: 700; font-size: 15px; color: #ffffff; }
+.csub  { font-size: 12px; opacity: 0.65; margin-top: 2px; color: #ffffff; }
 
 /* Location card */
 .locationcard {
