@@ -409,6 +409,33 @@
 
     sections.forEach(section => observer.observe(section));
   </script>
+<script>
+  document.querySelectorAll('.card video').forEach(video => {
+    const overlay = document.createElement('div');
+    overlay.style.cssText = 'position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:space-between;padding:0 10px;pointer-events:none;';
 
+    const time = document.createElement('span');
+    time.style.cssText = 'color:white;font-size:13px;font-weight:600;background:rgba(0,0,0,0.4);padding:2px 7px;border-radius:8px;';
+    time.textContent = '0:00';
+
+    const sound = document.createElement('span');
+    sound.style.cssText = 'color:white;font-size:18px;cursor:pointer;pointer-events:all;background:rgba(0,0,0,0.4);padding:2px 7px;border-radius:8px;';
+    sound.textContent = '🔇';
+
+    video.addEventListener('timeupdate', () => {
+      const s = Math.floor(video.currentTime);
+      time.textContent = `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+    });
+
+    sound.addEventListener('click', () => {
+      video.muted = !video.muted;
+      sound.textContent = video.muted ? '🔇' : '🔊';
+    });
+
+    overlay.appendChild(time);
+    overlay.appendChild(sound);
+    video.parentElement.appendChild(overlay);
+  });
+</script>
 </body>
 </html>
