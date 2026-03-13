@@ -64,14 +64,19 @@
           <div class="card vertical">
             <video
               src="assets/energy-drink.mp4"
-              poster="assets/energy-drink-thumb.jpg"
               autoplay
               loop
               muted
               playsinline
               preload="auto"
-              onclick="this.muted=!this.muted
+              id="vid1"
             ></video>
+            <div class="vid-controls">
+              <span class="vid-time" id="vid1-time">0:00</span>
+              <span class="vid-mute" onclick="toggleMute('vid1', 'vid1-icon')">
+                <img id="vid1-icon" src="assets/mute-icon.png" style="width:20px;height:20px;">
+              </span>
+            </div>
           </div>
 
           <!-- VERTICAL CARD 2 -->
