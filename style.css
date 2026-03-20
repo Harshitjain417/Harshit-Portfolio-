@@ -1,10 +1,5 @@
 /* ============================================================
    HARSHIT JAIN — PORTFOLIO STYLES
-   ============================================================
-   QUICK GUIDE:
-   - To change colors: search for the color code (e.g. #111) and replace it
-   - To change card sizes: look for .card.vertical, .card.horizontal, .card.square
-   - To change fonts: change the font-family in the * selector at the top
 ============================================================ */
 
 * {
@@ -20,7 +15,7 @@ body {
 }
 
 /* ============================================================
-   MAIN LAYOUT — Left sidebar + Right content
+   MAIN LAYOUT
 ============================================================ */
 .wrap {
   width: 100%;
@@ -30,7 +25,6 @@ body {
   gap: 40px;
   padding: 40px 60px;
 }
-
 
 /* ============================================================
    LEFT SIDEBAR
@@ -42,18 +36,17 @@ body {
   align-self: start;
 }
 
-/* Profile picture — put your photo at assets/profile.jpg */
 .profile .avatar {
-  width: 380px;
+  width: 100%;
   height: 220px;
-  border-radius: 3%;
+  border-radius: 20px;
   background: #ddd;
   background-image: url("assets/profile.jpg");
   background-size: cover;
   background-position: center;
   margin-bottom: 18px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-}  
+}
 
 .profile {
   text-align: center;
@@ -81,6 +74,17 @@ body {
   text-align: center;
 }
 
+.textbox {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 12px;
+}
 
 /* ============================================================
    RIGHT CONTENT AREA
@@ -91,6 +95,14 @@ body {
 
 .section {
   margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .title {
@@ -99,14 +111,11 @@ body {
   font-weight: 700;
   margin-bottom: 24px;
   letter-spacing: 0.3px;
+  color: #ffffff;
 }
-
 
 /* ============================================================
    CARD GRIDS
-   .two   = 2 columns
-   .one   = 1 column (full width)
-   .four  = 4 columns
 ============================================================ */
 .cards {
   display: grid;
@@ -114,33 +123,28 @@ body {
   justify-content: center;
 }
 
-/* 2-column grid */
 .cards.two {
   grid-template-columns: repeat(2, 1fr);
   max-width: 560px;
   margin: 0 auto;
 }
 
-/* 1-column grid (wide single card) */
 .cards.one {
   grid-template-columns: 1fr;
   max-width: 560px;
   margin: 0 auto;
 }
 
-/* 4-column grid (clinic section) */
 .cards.four {
   grid-template-columns: repeat(4, 1fr);
   max-width: 100%;
 }
 
-/* Contact grid */
 .cards.contactgrid {
   grid-template-columns: repeat(2, 1fr);
   max-width: 700px;
   margin: 0 auto;
 }
-
 
 /* ============================================================
    CARD STYLES
@@ -152,27 +156,29 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
   border: 1px solid rgba(255, 255, 255, 0.15);
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* VERTICAL card — 9:16 ratio (portrait, like Instagram Reels) */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
 .card.vertical {
   aspect-ratio: 9 / 16;
   width: 100%;
 }
 
-/* SQUARE card — 1:1 ratio */
 .card.square {
   aspect-ratio: 1 / 1;
   width: 100%;
 }
 
-/* HORIZONTAL card — 16:9 ratio (landscape, like YouTube) */
 .card.horizontal {
   aspect-ratio: 16 / 9;
   width: 100%;
 }
 
-/* Video fills the entire card */
 .card video {
   width: 100%;
   height: 100%;
@@ -180,35 +186,6 @@ body {
   display: block;
   border-radius: 18px;
 }
-
-
-/* ============================================================
-   STATS CARD (the "Edited 200+" white card)
-============================================================ */
-.stats-card {
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 24px 20px;
-  border: 1px solid #e5e5e5;
-}
-
-.stats-number {
-  font-size: 26px;
-  font-weight: 900;
-  color: #111;
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-
-.stats-sub {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.5;
-}
-
 
 /* ============================================================
    CONTACT SECTION
@@ -231,10 +208,9 @@ body {
 
 .contactcard:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Icon badges */
 .icon {
   width: 46px;
   height: 46px;
@@ -247,29 +223,11 @@ body {
   flex-shrink: 0;
 }
 
-.icon.linkedin  { background: #0a66c2; }
-.icon.whatsapp  { background: #25D366; }
-.icon.instagram { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); }
-
 .cname { font-weight: 700; font-size: 15px; color: #ffffff; }
 .csub  { font-size: 12px; opacity: 0.65; margin-top: 2px; color: #ffffff; }
 
-/* Location card */
-.locationcard {
-  justify-content: center;
-  background: linear-gradient(135deg, #cfe9ff, #e6ffd7);
-  cursor: default;
-}
-
-.location-text {
-  font-size: 16px;
-  font-weight: 700;
-  color: #111;
-}
-
-
 /* ============================================================
-   RESPONSIVE — Stacks to single column on mobile/tablet
+   RESPONSIVE
 ============================================================ */
 @media (max-width: 1100px) {
   .cards.four {
@@ -307,38 +265,4 @@ body {
   .name {
     font-size: 32px;
   }
-}
-
-.textbox {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 24px;
-  padding: 20px;
-  text-align: center;
-  margin-top: 12px;
-}
-
-/* FADE IN ON SCROLL */
-.section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* CARD HOVER LIFT */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
